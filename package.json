@@ -1,0 +1,24 @@
+{
+    "name": "@j127/parcel_demo_simpler",
+    "version": "1.0.0",
+    "description": "A quick parcel example",
+    "browserslist": "defaults",
+    "scripts": {
+        "start": "parcel ./src/index.html",
+        "clean": "rm -rf ./dist/",
+        "build": "npm run clean && parcel build ./src/index.html --no-source-maps",
+        "stage": "netlify deploy --dir=dist",
+        "deploy": "npm run build && netlify deploy --prod --dir=dist"
+    },
+    "keywords": [
+        "parcel",
+        "javascript"
+    ],
+    "author": "Josh Cohen",
+    "license": "BSD-3-Clause",
+    "devDependencies": {
+        "netlify-cli": "^9.4.0",
+        "parcel": "^2.3.1",
+        "prettier": "^2.5.1"
+    }
+}
